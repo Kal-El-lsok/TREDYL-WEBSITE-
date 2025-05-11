@@ -5,6 +5,7 @@
 }
 
 .header{
+    min-height: 75vh;
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(FB_IMG_17339964611578556.jpg);
     background-position: center;
