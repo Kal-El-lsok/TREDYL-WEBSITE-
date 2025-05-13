@@ -346,7 +346,7 @@ nav .fa{
     font-size: 55px;
     font-weight: 600;
     text-align: center;
-    color:rgb(2, 2, 59);
+    color: darkred;
 }
 
 .row{
@@ -375,10 +375,10 @@ nav .fa{
     border-radius: 50px;
 }
 .jstaff-col h2{
-    color:rgb(2, 2, 59);
+    color: blue;
 }
 .jstaff-col h3{
-    color:rgb(2, 2, 59);
+    color: blue;
 }
 
 
