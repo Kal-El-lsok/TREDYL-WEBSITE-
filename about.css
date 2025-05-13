@@ -416,47 +416,70 @@ nav .fa{
 
 
 
-/*----- manpic -----*/
-.manpic{
-    width: 96.8%;
+
+
+
+/*----- non -----*/
+.non{
+    width: 100%;
     margin: auto;
     text-align: center;
-    padding: 20px;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(nnnn.jpg);
-    color: #fff;
-    border-radius: 30px;
+    padding-top: 20px;
+    background-color: rgb(17, 2, 2);
+    border-radius: 50px;
 }
-@media(max-width:700px){
-    .manpic{
-        width: 87%;
-    }
-}
-.manpic h1{
-    font-size: 38px;
+.non h1{
+    font-size: 55px;
     font-weight: 600;
-    margin-bottom: 7px;
+    text-align: center;
+    color: gold;
 }
 
-.manpic img{
-    width: 940px;
-    height: 40%;
-    border-radius: 30px;
+.row{
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.non-col{
+    flex-basis: 20%;
+    border-radius: 50px;
+    margin-bottom: 0%;
+    padding-bottom: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.non-col h2{
+    color: blue;
+}
+.non-col h3{
+    color: blue;
+}
+.non-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.9);
 }
 
 
-@media (max-width:922px){
-    .manpic img{
-        width: 100%;
-        border-radius: 50px;
-        
-    }
+.non-col img{
+    width: 100%;
+    border-radius: 50px;
 }
 
 @media(max-width: 700px){
     .row{
         flex-direction: column;
     }
+    .non-col img{
+        width: 75%;
+    }
 }
+@media(max-width: 400px){
+    .non-col img{
+        width: 100%;
+    }
+                          }
 
 
 
