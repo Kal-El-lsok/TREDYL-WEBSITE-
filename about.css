@@ -726,6 +726,97 @@ nav .fa{
 
 
 
+/*----- name -----*/
+.add{
+    width: 96.8%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    color: blueviolet;
+    border-radius: 30px;
+}
+@media(max-width:700px){
+    .add{
+        width: 87%;
+    }
+}
+.add h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.row{
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+.add-col{
+    flex-basis: 65%;
+    background: rgb(87, 13, 13);
+    border-radius: 50px;
+    margin-bottom: 1%;
+    padding-bottom: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+.add-col h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+    font-size: 25px;
+    color: #fff;
+}
+.add-col p{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgb(34, 34, 224);
+}
+.add-col:hover{
+    box-shadow: 0 0 20px 0px rgba(235, 185, 185, 0.9);
+}
+
+.add-col1{
+    flex-basis: 32%;
+    background: rgb(87, 13, 13);
+    border-radius: 50px;
+    margin-bottom: 1%;
+    padding-bottom: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.add-col1 h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+    font-size: 25px;
+}
+.add-col1 p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.add-col1 h4{
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.add-col1:hover{
+    box-shadow: 0 0 20px 0px rgba(235, 185, 185, 0.9);
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
 /*----- exam hall -----*/
 .examhall{
     width: 100%;
