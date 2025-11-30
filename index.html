@@ -339,6 +339,24 @@
     </footer>
 
     <script>
+
+// Mobile Menu Toggle
+function showMenu() {
+    document.getElementById("navLinks").classList.add("active");
+}
+
+function hideMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+}
+
+// Close mobile menu when clicking on links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hideMenu();
+    });
+});
+
+
         // Mobile Menu Toggle
         function showMenu() {
             document.getElementById("navLinks").classList.add("active");
@@ -385,20 +403,6 @@
             appearOnScroll.observe(element);
         });
     </script>
-// Mobile Menu Toggle
-function showMenu() {
-    document.getElementById("navLinks").classList.add("active");
-}
 
-function hideMenu() {
-    document.getElementById("navLinks").classList.remove("active");
-}
-
-// Close mobile menu when clicking on links
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hideMenu();
-    });
-});
 </body>
 </html>
