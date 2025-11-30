@@ -73,13 +73,13 @@ nav img {
     transform: translateY(-2px);
 }
 
-.hero-btn {
+.nav-btn {
     background: var(--accent-color) !important;
     color: var(--text-dark) !important;
     border: 2px solid var(--accent-color);
 }
 
-.hero-btn:hover {
+.nav-btn:hover {
     background: transparent !important;
     color: var(--accent-color) !important;
 }
@@ -93,10 +93,15 @@ nav .fa {
 }
 
 /* Hero Section */
-.text-box {
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    min-height: 50vh;
     color: var(--text-light);
-    padding-top: 2rem;
+    padding: 0 5%;
 }
 
 .text-box h1 {
@@ -162,6 +167,7 @@ section h1::after {
     font-size: 1.1rem;
     line-height: 1.7;
     color: var(--text-dark);
+    margin-bottom: 2rem;
 }
 
 /* Management Section */
@@ -428,7 +434,7 @@ section h1::after {
     text-align: center;
 }
 
-.examhall-image {
+.examhall-content {
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -481,6 +487,12 @@ section h1::after {
     background: var(--accent-color);
 }
 
+.testimonials p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -521,6 +533,7 @@ section h1::after {
     font-style: italic;
     line-height: 1.6;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 .stars {
