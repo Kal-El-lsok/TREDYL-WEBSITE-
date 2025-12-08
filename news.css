@@ -476,3 +476,235 @@ footer {
 script {
     display: none !important;
 }
+
+
+
+
+
+/* Add these new styles to your existing news.css file */
+
+/* Post meta information */
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.post-meta i {
+    margin-right: 0.3rem;
+    color: var(--accent-color);
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.post-details {
+    margin-bottom: 2rem;
+}
+
+.post-details p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.post-details ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.post-details li {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Social Interaction Styles */
+.social-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--gray-light);
+    border-radius: var(--border-radius);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.like-section, .share-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.like-btn, .share-btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.like-btn {
+    background: var(--light-bg);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.like-btn:hover {
+    background: var(--secondary-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.like-btn.liked {
+    background: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.like-btn i {
+    font-size: 1.1rem;
+}
+
+.like-text {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.share-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--primary-color);
+}
+
+.share-btn:hover, .share-btn.active {
+    background: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.share-options {
+    display: none;
+    position: absolute;
+    background: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 0.8rem;
+    gap: 0.8rem;
+    z-index: 100;
+    margin-top: 0.5rem;
+}
+
+.share-options.show {
+    display: flex;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.share-option[data-platform="facebook"] {
+    background: #3b5998;
+}
+
+.share-option[data-platform="twitter"] {
+    background: #1da1f2;
+}
+
+.share-option[data-platform="whatsapp"] {
+    background: #25d366;
+}
+
+.share-option[data-platform="telegram"] {
+    background: #0088cc;
+}
+
+.share-option:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Secondary button style */
+.news-btn.secondary {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.news-btn.secondary:hover {
+    background: transparent;
+    color: var(--secondary-color);
+}
+
+/* Placeholder card */
+.news-card.placeholder .placeholder-image {
+    height: 300px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+.subscribe-news {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--gray-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-interaction {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .like-section, .share-section {
+        justify-content: space-between;
+    }
+    
+    .share-options {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .like-btn, .share-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
