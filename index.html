@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Word of the Day Section -->
+    <div class="word-of-day">
+        <div class="word-container">
+            <span class="word-icon"><i class="fas fa-book"></i> WORD OF THE DAY</span>
+            <button class="unlock-btn" onclick="showWordOfDay()">UNLOCK</button>
+        </div>
+    </div>
+
+    <!-- Update Notification Popup -->
+    <div class="update-popup" id="updatePopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3><i class="fas fa-bell"></i> School Update</h3>
+                <button class="close-btn" onclick="closeUpdatePopup()">&times;</button>
+            </div>
+            <div class="popup-body">
+                <p>There's an important school update available!</p>
+                <p>Check out the latest news and announcements.</p>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn" onclick="goToUpdates()">Check Updates</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Word of the Day Popup -->
+    <div class="word-popup" id="wordPopup">
+        <div class="word-popup-content">
+            <div class="word-popup-header">
+                <h3><i class="fas fa-graduation-cap"></i> Word of the Day</h3>
+                <button class="close-btn" onclick="closeWordPopup()">&times;</button>
+            </div>
+            <div class="word-popup-body">
+                <div class="word-display">
+                    <h2 id="currentWord">PERSEVERANCE</h2>
+                    <div class="word-phonetic">/ˌpɜːrsəˈvɪrəns/</div>
+                    <div class="word-type">noun</div>
+                    <div class="word-meaning">
+                        <p><strong>Meaning:</strong> Persistence in doing something despite difficulty or delay in achieving success.</p>
+                        <p><strong>Example:</strong> Her perseverance in studying daily led to excellent exam results.</p>
+                        <p><strong>Synonyms:</strong> persistence, determination, tenacity, diligence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="word-popup-footer">
+                <p><i class="fas fa-lightbulb"></i> Remember: Learning one new word each day expands your vocabulary!</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <section class="header">
         <nav>
@@ -51,6 +101,62 @@
                     <p>TREDYL INTERNATIONAL SCHOOLS have a vision for it's pupils and students reaching the skies with Christ being the anchor for service to humanity.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- School Art Section -->
+    <section class="school-art">
+        <h1>School Art Gallery</h1>
+        <p>Showcasing creative works from our talented students</p>
+        
+        <div class="art-slider">
+            <div class="slides-container">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 1">
+                    <div class="slide-info">
+                        <h3>Colorful Dreams</h3>
+                        <p>By Sarah Johnson, Grade 8</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 2">
+                    <div class="slide-info">
+                        <h3>African Heritage</h3>
+                        <p>By Musa Ahmed, Grade 10</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 3">
+                    <div class="slide-info">
+                        <h3>Nature's Beauty</h3>
+                        <p>By Chinyere Okoro, Grade 9</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 4">
+                    <div class="slide-info">
+                        <h3>Abstract Thoughts</h3>
+                        <p>By David Okafor, Grade 11</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <div class="art-view-more">
+            <a href="gallery.html" class="art-btn">
+                View Full Gallery <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
     </section>
 
@@ -314,6 +420,16 @@
     </footer>
 
     <script>
+        // Word of the Day Data - Easy to change daily
+        const wordOfDay = {
+            word: "PERSEVERANCE",
+            phonetic: "/ˌpɜːrsəˈvɪrəns/",
+            type: "noun",
+            meaning: "Persistence in doing something despite difficulty or delay in achieving success.",
+            example: "Her perseverance in studying daily led to excellent exam results.",
+            synonyms: "persistence, determination, tenacity, diligence"
+        };
+        
         // Mobile Menu Toggle
         function showMenu() {
             document.getElementById("navLinks").classList.add("active");
@@ -328,6 +444,98 @@
             link.addEventListener('click', () => {
                 hideMenu();
             });
+        });
+
+        // Show Update Popup automatically when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Always show update popup on homepage visit
+            setTimeout(() => {
+                document.getElementById('updatePopup').style.display = 'flex';
+            }, 1000);
+            
+            // Initialize art slider
+            initArtSlider();
+        });
+
+        // Close Update Popup
+        function closeUpdatePopup() {
+            document.getElementById('updatePopup').style.display = 'none';
+        }
+
+        // Go to Updates Page
+        function goToUpdates() {
+            window.location.href = 'news.html';
+        }
+
+        // Word of the Day Functions
+        function showWordOfDay() {
+            // Update word details
+            document.getElementById('currentWord').textContent = wordOfDay.word;
+            
+            // Show popup
+            document.getElementById('wordPopup').style.display = 'flex';
+        }
+
+        function closeWordPopup() {
+            document.getElementById('wordPopup').style.display = 'none';
+        }
+
+        // Art Slider Functionality
+        function initArtSlider() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                // Remove active class from all slides and dots
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Calculate new slide index
+                currentSlide = (n + slides.length) % slides.length;
+                
+                // Add active class to current slide and dot
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            // Next slide
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+            });
+
+            // Previous slide
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+            });
+
+            // Dot click
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+
+            // Auto slide every 5 seconds
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+        }
+
+        // Close popups when clicking outside
+        document.addEventListener('click', function(e) {
+            const updatePopup = document.getElementById('updatePopup');
+            const wordPopup = document.getElementById('wordPopup');
+            
+            if (e.target === updatePopup) {
+                updatePopup.style.display = 'none';
+            }
+            
+            if (e.target === wordPopup) {
+                wordPopup.style.display = 'none';
+            }
         });
     </script>
 </body>
