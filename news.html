@@ -42,20 +42,74 @@
         <h1>TRENDING UPDATES...</h1>
         <div class="news-container">
             <div class="news-grid">
+                <!-- Results Announcement Post -->
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://www.frontlist.in/storage/uploads/2020/07/CDS-Results-out-1024x674-1.jpg" alt="3rd Term School Results">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="School Results Announcement">
                     </div>
                     <div class="news-content">
-                        <h2>3rd TERM SCHOOL RESULT!!!</h2>
-                        <p>Click on the "CHECK RESULT" button and you will be directed to a new page where you will see options. After clicking the check result button, you will be asked to select your "CLASS", then enter your "ROLL NUMBER", and lastly "PRINT RESULT".</p>
-                        <a href="https://kal-el-lsok.github.io/TREDYL-result-porter-test/" class="news-btn">CHECK RESULT!!!</a>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> 8 December 2025</span>
+                            <span class="post-author"><i class="far fa-user"></i> School Secretary</span>
+                        </div>
+                        <h2>OFFICIAL SCHOOL RESULTS ANNOUNCEMENT</h2>
+                        <p class="post-excerpt">The Management of TREDYL International Schools is pleased to inform all students, parents, and guardians that the official results for the 3rd term examination will be released on <strong>11 December 2025</strong>.</p>
+                        
+                        <div class="post-details">
+                            <p>All results will be accessible through our official online portal. Students are advised to have their roll numbers ready for access.</p>
+                            <p>The results release will follow this schedule:</p>
+                            <ul>
+                                <li><strong>9:00 AM:</strong> Primary Section Results</li>
+                                <li><strong>11:00 AM:</strong> Junior Secondary Results</li>
+                                <li><strong>2:00 PM:</strong> Senior Secondary Results</li>
+                            </ul>
+                            <p>For any technical issues accessing results, please contact the ICT department at the school premises.</p>
+                        </div>
+                        
+                        <!-- Like and Share Buttons -->
+                        <div class="social-interaction">
+                            <div class="like-section">
+                                <button id="likeBtn" class="like-btn">
+                                    <i class="far fa-thumbs-up"></i> Like <span id="likeCount">0</span>
+                                </button>
+                                <span class="like-text" id="likeText">Be the first to like this</span>
+                            </div>
+                            
+                            <div class="share-section">
+                                <button id="shareBtn" class="share-btn">
+                                    <i class="fas fa-share"></i> Share
+                                </button>
+                                <div class="share-options" id="shareOptions">
+                                    <a href="#" class="share-option" data-platform="facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="share-option" data-platform="twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="share-option" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="share-option" data-platform="telegram"><i class="fab fa-telegram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Results Access Button -->
+                        <a href="https://kal-el-lsok.github.io/TREDYL-result-porter-test/" class="news-btn">ACCESS RESULTS PORTAL</a>
+                    </div>
+                </div>
+                
+                <!-- Additional placeholder for future updates -->
+                <div class="news-card placeholder">
+                    <div class="news-image">
+                        <div class="placeholder-image">More Updates Coming Soon</div>
+                    </div>
+                    <div class="news-content">
+                        <h2>STAY TUNED FOR MORE UPDATES</h2>
+                        <p>We will be posting important school announcements, events, and achievements here regularly.</p>
+                        <div class="subscribe-news">
+                            <p>Subscribe to our newsletter to never miss an update!</p>
+                            <a href="#newsletter" class="news-btn secondary">SUBSCRIBE NOW</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="loading-message">
-                <h4>LOADING MORE UPDATES...</h4>
-            </div>
+            
+            <!-- Loading removed since we have content -->
         </div>
     </section>
 
@@ -98,7 +152,7 @@
                     <li><a href="admission.html">ADMISSION</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-section" id="newsletter">
                 <h3>NEWSLETTER</h3>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Enter Your Email ID" required>
@@ -131,6 +185,107 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hideMenu();
+            });
+        });
+
+        // Like and Share Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const likeBtn = document.getElementById('likeBtn');
+            const likeCount = document.getElementById('likeCount');
+            const likeText = document.getElementById('likeText');
+            const shareBtn = document.getElementById('shareBtn');
+            const shareOptions = document.getElementById('shareOptions');
+            
+            let likes = 0;
+            let liked = false;
+            
+            // Like button functionality
+            likeBtn.addEventListener('click', function() {
+                if (!liked) {
+                    likes++;
+                    likeCount.textContent = likes;
+                    likeText.textContent = "You and " + (likes-1) + " others like this";
+                    likeBtn.innerHTML = '<i class="fas fa-thumbs-up"></i> Liked <span id="likeCount">' + likes + '</span>';
+                    likeBtn.classList.add('liked');
+                    liked = true;
+                    
+                    // Small animation effect
+                    likeBtn.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        likeBtn.style.transform = 'scale(1)';
+                    }, 200);
+                } else {
+                    likes--;
+                    likeCount.textContent = likes;
+                    if (likes === 0) {
+                        likeText.textContent = "Be the first to like this";
+                    } else {
+                        likeText.textContent = likes + " people like this";
+                    }
+                    likeBtn.innerHTML = '<i class="far fa-thumbs-up"></i> Like <span id="likeCount">' + likes + '</span>';
+                    likeBtn.classList.remove('liked');
+                    liked = false;
+                }
+            });
+            
+            // Share button functionality
+            shareBtn.addEventListener('click', function() {
+                shareOptions.classList.toggle('show');
+                
+                // Toggle animation
+                if (shareOptions.classList.contains('show')) {
+                    shareBtn.innerHTML = '<i class="fas fa-times"></i> Close';
+                    shareBtn.classList.add('active');
+                } else {
+                    shareBtn.innerHTML = '<i class="fas fa-share"></i> Share';
+                    shareBtn.classList.remove('active');
+                }
+            });
+            
+            // Share options functionality
+            const shareOptionLinks = document.querySelectorAll('.share-option');
+            shareOptionLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.getAttribute('data-platform');
+                    const url = window.location.href;
+                    const title = document.title;
+                    const text = "Check out this important update from TREDYL International Schools!";
+                    
+                    let shareUrl = '';
+                    
+                    switch(platform) {
+                        case 'facebook':
+                            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                            break;
+                        case 'twitter':
+                            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                            break;
+                        case 'whatsapp':
+                            shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+                            break;
+                        case 'telegram':
+                            shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                            break;
+                    }
+                    
+                    // Open share window
+                    window.open(shareUrl, 'Share', 'width=600,height=400');
+                    
+                    // Close share options
+                    shareOptions.classList.remove('show');
+                    shareBtn.innerHTML = '<i class="fas fa-share"></i> Share';
+                    shareBtn.classList.remove('active');
+                });
+            });
+            
+            // Close share options when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!shareBtn.contains(e.target) && !shareOptions.contains(e.target)) {
+                    shareOptions.classList.remove('show');
+                    shareBtn.innerHTML = '<i class="fas fa-share"></i> Share';
+                    shareBtn.classList.remove('active');
+                }
             });
         });
     </script>
