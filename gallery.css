@@ -14,7 +14,6 @@
     --text-light: #ffffff;
     --gray-light: #e9ecef;
     --border-radius: 8px;
-    --shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 body {
@@ -25,7 +24,7 @@ body {
 
 /* Header Section */
 .header {
-    min-height: 60vh;
+    min-height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(FB_IMG_17339964611578556.jpg);
     background-position: center;
     background-size: cover;
@@ -100,7 +99,7 @@ nav .fa {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 60vh;
+    min-height: 50vh;
     color: var(--text-light);
     padding: 0 5%;
 }
@@ -115,52 +114,22 @@ nav .fa {
 .text-box p {
     font-size: 1.2rem;
     opacity: 0.9;
-    margin-bottom: 2rem;
 }
 
-.gallery-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+/* Sections */
+section {
+    padding: 5rem 5%;
 }
 
-.gallery-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: var(--accent-color);
-    color: var(--text-dark);
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid var(--accent-color);
-    font-size: 0.9rem;
-}
-
-.gallery-btn:hover,
-.gallery-btn.active {
-    background: transparent;
-    color: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 4rem 5%;
-    background: var(--light-bg);
-}
-
-.gallery h1 {
+section h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
     position: relative;
 }
 
-.gallery h1::after {
+section h1::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -171,119 +140,192 @@ nav .fa {
     background: var(--accent-color);
 }
 
-/* Filter Buttons */
-.gallery-filter {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 3rem;
-}
-
-.filter-btn {
-    padding: 0.8rem 1.5rem;
-    background: var(--text-light);
-    border: 2px solid var(--secondary-color);
+.section-subtitle {
+    text-align: center;
     color: var(--secondary-color);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--secondary-color);
-    color: var(--text-light);
-    transform: translateY(-2px);
+/* Student Art Section */
+.student-art {
+    background: var(--text-light);
 }
 
-/* Gallery Grid */
-.gallery-grid {
+.art-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.gallery-item {
-    position: relative;
+.art-item {
+    background: var(--light-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
+.art-item:hover {
     transform: translateY(-5px);
 }
 
-.gallery-item img {
+.art-image {
     width: 100%;
     height: 250px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+    overflow: hidden;
 }
 
-.gallery-item:hover img {
+.art-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.art-item:hover .art-image img {
     transform: scale(1.05);
 }
 
-.overlay {
+.art-info {
+    padding: 1.5rem;
+}
+
+.art-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.art-info p {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Event Slides Section */
+.event-slides {
+    background: var(--light-bg);
+}
+
+.event-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slides-container {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-content {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     color: var(--text-light);
-    padding: 1.5rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+    padding: 2rem;
 }
 
-.gallery-item:hover .overlay {
-    transform: translateY(0);
-}
-
-.overlay h3 {
-    font-size: 1.1rem;
+.slide-content h3 {
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
-.overlay p {
+.event-date {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
     font-size: 0.9rem;
-    opacity: 0.8;
 }
 
-/* Load More Button */
-.load-more {
-    text-align: center;
-    margin-top: 3rem;
+.event-date i {
+    margin-right: 0.5rem;
 }
 
-.load-btn {
-    padding: 1rem 2.5rem;
-    background: var(--accent-color);
-    color: var(--text-dark);
-    border: 2px solid var(--accent-color);
-    border-radius: var(--border-radius);
-    font-weight: 600;
+.slide-content p {
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* Slider Controls */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.prev-btn, .next-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gray-light);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1rem;
 }
 
-.load-btn:hover {
-    background: transparent;
-    color: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-.load-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.dot.active {
+    background: var(--accent-color);
+    transform: scale(1.2);
 }
 
 /* CTA Section */
@@ -488,39 +530,16 @@ footer {
         font-size: 2.2rem;
     }
     
-    .text-box p {
-        font-size: 1rem;
-    }
-    
-    .gallery-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .gallery-btn {
-        width: 200px;
-        text-align: center;
-    }
-    
-    .gallery-filter {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .filter-btn {
-        width: 200px;
-    }
-    
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
     section {
         padding: 3rem 5%;
     }
     
-    .gallery h1 {
+    section h1 {
         font-size: 2rem;
+    }
+    
+    .slides-container {
+        height: 400px;
     }
 }
 
@@ -529,28 +548,19 @@ footer {
         font-size: 1.8rem;
     }
     
-    .footer-content {
+    .art-gallery {
         grid-template-columns: 1fr;
     }
     
-    .gallery-item {
-        margin-bottom: 1rem;
+    .slides-container {
+        height: 350px;
     }
-}
-
-/* Lightbox Customization */
-.lb-data .lb-caption {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-light);
-}
-
-.lb-nav a.lb-prev,
-.lb-nav a.lb-next {
-    opacity: 0.8;
-}
-
-.lb-nav a.lb-prev:hover,
-.lb-nav a.lb-next:hover {
-    opacity: 1;
+    
+    .slide-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 }
