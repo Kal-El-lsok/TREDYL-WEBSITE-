@@ -6,7 +6,6 @@
     <title>TREDYL INTERNATIONAL SCHOOLS - GALLERY</title>
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -36,210 +35,127 @@
                 <h1>SCHOOL GALLERY</h1>
                 <p>Capturing Moments, Creating Memories</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Student Art Section -->
+    <section class="student-art">
+        <h1>STUDENT ART GALLERY</h1>
+        <p class="section-subtitle">Creative works from our talented students</p>
+        
+        <div class="art-gallery">
+            <div class="art-item">
+                <div class="art-image">
+                    <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 1">
+                </div>
+                <div class="art-info">
+                    <h3>Colorful Dreams</h3>
+                    <p><strong>Artist:</strong> Sarah Johnson</p>
+                    <p><strong>Grade:</strong> 8</p>
+                    <p><strong>Medium:</strong> Acrylic on Canvas</p>
+                </div>
+            </div>
             
-            <div class="gallery-buttons">
-                <a href="#all" class="gallery-btn active" data-filter="all">ALL PHOTOS</a>
-                <a href="#events" class="gallery-btn" data-filter="events">SCHOOL EVENTS</a>
-                <a href="#sports" class="gallery-btn" data-filter="sports">SPORTS DAY</a>
-                <a href="#classroom" class="gallery-btn" data-filter="classroom">CLASSROOM ACTIVITIES</a>
+            <div class="art-item">
+                <div class="art-image">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 2">
+                </div>
+                <div class="art-info">
+                    <h3>African Heritage</h3>
+                    <p><strong>Artist:</strong> Musa Ahmed</p>
+                    <p><strong>Grade:</strong> 10</p>
+                    <p><strong>Medium:</strong> Oil Painting</p>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 3">
+                </div>
+                <div class="art-info">
+                    <h3>Nature's Beauty</h3>
+                    <p><strong>Artist:</strong> Chinyere Okoro</p>
+                    <p><strong>Grade:</strong> 9</p>
+                    <p><strong>Medium:</strong> Watercolor</p>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Student Painting 4">
+                </div>
+                <div class="art-info">
+                    <h3>Abstract Thoughts</h3>
+                    <p><strong>Artist:</strong> David Okafor</p>
+                    <p><strong>Grade:</strong> 11</p>
+                    <p><strong>Medium:</strong> Mixed Media</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="gallery-filter">
-            <button class="filter-btn active" data-filter="all">All Photos</button>
-            <button class="filter-btn" data-filter="events">School Events</button>
-            <button class="filter-btn" data-filter="sports">Sports Day</button>
-            <button class="filter-btn" data-filter="classroom">Classroom Activities</button>
-            <button class="filter-btn" data-filter="graduation">Graduation</button>
-            <button class="filter-btn" data-filter="clubs">Club Activities</button>
-            <button class="filter-btn" data-filter="cultural">Cultural Day</button>
-            <button class="filter-btn" data-filter="excursion">Excursions</button>
-        </div>
-
-        <div class="gallery-grid">
-            <!-- School Events -->
-            <div class="gallery-item events" data-category="events">
-                <a href="gallery/event1.jpg" data-lightbox="gallery" data-title="Annual Inter-house Competition">
-                    <img src="gallery/event1.jpg" alt="Annual Inter-house Competition">
-                    <div class="overlay">
-                        <h3>Annual Inter-house Competition</h3>
-                        <p>Students showcasing talents in various competitions</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item events" data-category="events">
-                <a href="gallery/event2.jpg" data-lightbox="gallery" data-title="Parents-Teachers Meeting">
-                    <img src="gallery/event2.jpg" alt="Parents-Teachers Meeting">
-                    <div class="overlay">
-                        <h3>Parents-Teachers Meeting</h3>
-                        <p>Engaging with parents for student development</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item events" data-category="events">
-                <a href="gallery/event3.jpg" data-lightbox="gallery" data-title="Career Day">
-                    <img src="gallery/event3.jpg" alt="Career Day">
-                    <div class="overlay">
-                        <h3>Career Day</h3>
-                        <p>Professionals guiding students on career choices</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Sports Day -->
-            <div class="gallery-item sports" data-category="sports">
-                <a href="gallery/sports1.jpg" data-lightbox="gallery" data-title="Track and Field Events">
-                    <img src="gallery/sports1.jpg" alt="Track and Field Events">
-                    <div class="overlay">
-                        <h3>Track and Field Events</h3>
-                        <p>Students competing in athletics</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item sports" data-category="sports">
-                <a href="gallery/sports2.jpg" data-lightbox="gallery" data-title="Football Match">
-                    <img src="gallery/sports2.jpg" alt="Football Match">
-                    <div class="overlay">
-                        <h3>Football Match</h3>
-                        <p>Inter-house football competition</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item sports" data-category="sports">
-                <a href="gallery/sports3.jpg" data-lightbox="gallery" data-title="Medal Ceremony">
-                    <img src="gallery/sports3.jpg" alt="Medal Ceremony">
-                    <div class="overlay">
-                        <h3>Medal Ceremony</h3>
-                        <p>Awarding outstanding athletes</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Classroom Activities -->
-            <div class="gallery-item classroom" data-category="classroom">
-                <a href="gallery/class1.jpg" data-lightbox="gallery" data-title="Science Laboratory">
-                    <img src="gallery/class1.jpg" alt="Science Laboratory">
-                    <div class="overlay">
-                        <h3>Science Laboratory</h3>
-                        <p>Practical experiments in progress</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item classroom" data-category="classroom">
-                <a href="gallery/class2.jpg" data-lightbox="gallery" data-title="Computer Class">
-                    <img src="gallery/class2.jpg" alt="Computer Class">
-                    <div class="overlay">
-                        <h3>Computer Class</h3>
-                        <p>Students learning digital skills</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item classroom" data-category="classroom">
-                <a href="gallery/class3.jpg" data-lightbox="gallery" data-title="Art Class">
-                    <img src="gallery/class3.jpg" alt="Art Class">
-                    <div class="overlay">
-                        <h3>Art Class</h3>
-                        <p>Creative expression through art</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Graduation -->
-            <div class="gallery-item graduation" data-category="graduation">
-                <a href="gallery/grad1.jpg" data-lightbox="gallery" data-title="Graduation Ceremony">
-                    <img src="gallery/grad1.jpg" alt="Graduation Ceremony">
-                    <div class="overlay">
-                        <h3>Graduation Ceremony</h3>
-                        <p>Class of 2024 graduation</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item graduation" data-category="graduation">
-                <a href="gallery/grad2.jpg" data-lightbox="gallery" data-title="Award Presentation">
-                    <img src="gallery/grad2.jpg" alt="Award Presentation">
-                    <div class="overlay">
-                        <h3>Award Presentation</h3>
-                        <p>Outstanding graduates receiving awards</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Club Activities -->
-            <div class="gallery-item clubs" data-category="clubs">
-                <a href="gallery/club1.jpg" data-lightbox="gallery" data-title="Debate Club">
-                    <img src="gallery/club1.jpg" alt="Debate Club">
-                    <div class="overlay">
-                        <h3>Debate Club</h3>
-                        <p>Students engaging in intellectual discourse</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item clubs" data-category="clubs">
-                <a href="gallery/club2.jpg" data-lightbox="gallery" data-title="Music Club">
-                    <img src="gallery/club2.jpg" alt="Music Club">
-                    <div class="overlay">
-                        <h3>Music Club</h3>
-                        <p>Young musicians in practice session</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Cultural Day -->
-            <div class="gallery-item cultural" data-category="cultural">
-                <a href="gallery/cultural1.jpg" data-lightbox="gallery" data-title="Cultural Day Celebration">
-                    <img src="gallery/cultural1.jpg" alt="Cultural Day Celebration">
-                    <div class="overlay">
-                        <h3>Cultural Day Celebration</h3>
-                        <p>Showcasing Nigerian cultural heritage</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item cultural" data-category="cultural">
-                <a href="gallery/cultural2.jpg" data-lightbox="gallery" data-title="Traditional Attire">
-                    <img src="gallery/cultural2.jpg" alt="Traditional Attire">
-                    <div class="overlay">
-                        <h3>Traditional Attire</h3>
-                        <p>Students in beautiful ethnic outfits</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Excursions -->
-            <div class="gallery-item excursion" data-category="excursion">
-                <a href="gallery/excursion1.jpg" data-lightbox="gallery" data-title="Educational Trip">
-                    <img src="gallery/excursion1.jpg" alt="Educational Trip">
-                    <div class="overlay">
-                        <h3>Educational Trip</h3>
-                        <p>Visit to National Museum</p>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="gallery-item excursion" data-category="excursion">
-                <a href="gallery/excursion2.jpg" data-lightbox="gallery" data-title="Science Excursion">
-                    <img src="gallery/excursion2.jpg" alt="Science Excursion">
-                    <div class="overlay">
-                        <h3>Science Excursion</h3>
-                        <p>Field trip to botanical garden</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+    <!-- Event Slides Section -->
+    <section class="event-slides">
+        <h1>SCHOOL EVENTS</h1>
+        <p class="section-subtitle">Highlights from our memorable school events</p>
         
-        <div class="load-more">
-            <button class="load-btn">LOAD MORE PHOTOS</button>
+        <div class="event-slider">
+            <div class="slides-container">
+                <div class="slide active">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Graduation Ceremony">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Annual Graduation Ceremony</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i> July 2024</p>
+                        <p>Our proud graduates celebrating their achievements with family and friends at the annual graduation ceremony.</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sports Day">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Inter-house Sports Competition</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i> March 2024</p>
+                        <p>Students competing in various athletic events, showcasing sportsmanship and teamwork during our annual sports day.</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cultural Day">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Cultural Day Celebration</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i> October 2024</p>
+                        <p>Students and staff celebrating Nigeria's diverse cultural heritage through traditional attire, dance, and food.</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="https://images.unsplash.com/photo-1524178239883-269a632bb546?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Science Fair">
+                    </div>
+                    <div class="slide-content">
+                        <h3>Annual Science & Technology Fair</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i> February 2024</p>
+                        <p>Students presenting innovative science projects and experiments to demonstrate their scientific knowledge.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
         </div>
     </section>
 
@@ -276,7 +192,6 @@
                     <li><a href="contact us.html">CONTACT US</a></li>
                     <li><a href="history.html">HISTORY</a></li>
                     <li><a href="clubs.html">CLUBS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="staff.html">STAFF</a></li>
                     <li><a href="news.html">UPDATES</a></li>
                     <li><a href="Creator.html">CREATOR</a></li>
@@ -302,8 +217,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
         // Mobile Menu Toggle
         function showMenu() {
@@ -321,88 +234,48 @@
             });
         });
 
-        // Gallery Filtering
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
+        // Event Slider Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                // Remove active class from all slides and dots
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
                 
-                // Add active class to clicked button
-                button.classList.add('active');
+                // Calculate new slide index
+                currentSlide = (n + slides.length) % slides.length;
                 
-                const filterValue = button.getAttribute('data-filter');
-                
-                // Show/Hide gallery items
-                document.querySelectorAll('.gallery-item').forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                // Add active class to current slide and dot
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            // Next slide
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+            });
+
+            // Previous slide
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+            });
+
+            // Dot click
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
                 });
             });
-        });
 
-        // Hero Gallery Buttons
-        document.querySelectorAll('.gallery-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Remove active class from all buttons
-                document.querySelectorAll('.gallery-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                // Update filter buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                    if (btn.getAttribute('data-filter') === filterValue) {
-                        btn.classList.add('active');
-                    }
-                });
-                
-                // Show/Hide gallery items
-                document.querySelectorAll('.gallery-item').forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Load More Button
-        document.querySelector('.load-btn').addEventListener('click', function() {
-            // In a real scenario, this would load more images from a server
-            // For now, we'll just show an alert
-            alert('More photos would be loaded from the server in a real implementation!');
-            this.textContent = 'No More Photos';
-            this.disabled = true;
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Lightbox configuration
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "Image %1 of %2"
+            // Auto slide every 5 seconds
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
         });
     </script>
 </body>
